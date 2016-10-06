@@ -22,10 +22,6 @@ var app = {
         var url_site = 'http://localhost/app_android/painel/ws/';
        // $(function() {
 
-            setTimeout(function() {
-                navigator.splashscreen.hide();
-            }, 5000);
-
             $('.menu-anchor').on('click touchstart', function(e){
                 $('html').toggleClass('menu-active');
                 e.preventDefault();
