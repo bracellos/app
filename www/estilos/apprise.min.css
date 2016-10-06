@@ -1,0 +1,87 @@
+.appriseOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  z-index: 2147483647;
+}
+
+.appriseOuter {
+  background: #eeeeee;
+  border: 1px solid #ffffff;
+  box-shadow: 0 3px 7px #333333;
+  -moz-box-shadow: 0 3px 7px #333333;
+  -webkit-box-shadow: 0 3px 7px #333333;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -khtml-border-radius: 4px;
+  z-index: 99999999;
+  min-width: 200px;
+  min-height: 50px;
+  max-width: 75%;
+  position: fixed;
+  display: none;
+  text-align:center;
+  z-index: 99999999999999999;
+}
+.appriseOuter span{
+	font-size:18px;
+  display: block;
+}
+.appriseOuter span.resposta-ok{
+	color:#13B27D;
+}
+.appriseOuter span.resposta-no{
+	color:#BC0936;
+}
+.appriseInner {
+  color: #333333;
+  text-shadow: 0 1px 0 #ffffff;
+  padding: 20px;
+}
+
+.appriseInner button {
+  border: 1px solid #bbbbbb;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px;
+  background: 0;
+  color: #232d3d;
+  font-size: 12px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 #ffffff;
+  cursor: pointer;
+  box-shadow: 0 1px 2px #cccccc;
+  -moz-box-shadow: 0 1px 2px #cccccc;
+  -webkit-box-shadow: 0 1px 2px #cccccc;
+  margin: 0 3px 10px;
+  padding: 4px 10px;
+}
+
+.appriseInner button: hover {
+  color: #d85054;
+}
+
+.aButtons, .aInput {
+  text-align: center;
+  margin: 20px 10px 0;
+}
+
+.aTextbox {
+  border: 1px solid #aaaaaa;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -khtml-border-radius: 4px;
+  box-shadow: 0 1px 0 #ffffff;
+  -moz-box-shadow: 0 1px 0 #ffffff;
+  -webkit-box-shadow: 0 1px 0 #ffffff;
+  width: 180px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+}
+
