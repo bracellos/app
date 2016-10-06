@@ -11,7 +11,7 @@
     <preference name="SplashScreenDelay" value="5000" />
     <preference name="FadeSplashScreen" value="false"/>
     <preference name="ShowSplashScreenSpinner" value="true"/>
-    <gap:platform name="android">
+    <platform name="android">
         <icon density="ldpi" src="res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="res/icon/android/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="res/icon/android/drawable-hdpi-icon.png" />
@@ -32,7 +32,7 @@
         <gap:splash density="port-xxxhdpi" src="res/screen/android/drawable-port-xxxhdpi-screen.png" />
         <gap:splash src="res/screen/android/9-patch.9.png" />
     </platform>
-    <gap:platform name="ios">
+    <platform name="ios">
         <icon height="57" platform="ios" src="res/icon/ios/icon.png" width="57" />
         <icon height="114" platform="ios" src="res/icon/ios/icon@2x.png" width="114" />
         <icon height="40" platform="ios" src="res/icon/ios/icon-40.png" width="40" />
@@ -60,12 +60,12 @@
         <gap:splash height="960" platform="ios" src="res/screen/ios/Default@2x~iphone.png" width="640" />
         <gap:splash height="480" platform="ios" src="res/screen/ios/Default~iphone.png" width="320" />
     </platform>
-    <gap:platform name="wp8">
+    <platform name="wp8">
         <icon height="99" platform="wp8" src="res/icon/wp8/ApplicationIcon.png" width="99" />
         <icon height="159" platform="wp8" src="res/icon/wp8/Background.png" width="159" />
         <gap:splash height="1280" platform="wp8" src="res/screen/wp8/screen-portrait.jpg" width="768" />
     </platform>
-    <gap:platform name="windows">
+    <platform name="windows">
         <icon height="150" platform="windows" src="res/icon/windows/Square150x150Logo.scale-100.png" width="150" />
         <icon height="30" platform="windows" src="res/icon/windows/Square30x30Logo.scale-100.png" width="30" />
         <icon height="50" platform="windows" src="res/icon/windows/StoreLogo.scale-100.png" width="50" />
@@ -91,10 +91,10 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <gap:platform name="android">
+    <platform name="android">
         <allow-intent href="market:*" />
     </platform>
-    <gap:platform name="ios">
+    <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
