@@ -15,12 +15,19 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        navigator.splashscreen.show();
+
+        setTimeout(function() {
+            navigator.splashscreen.hide();
+        }, 5000);
+        
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var url_site = 'http://localhost/app_android/painel/ws/';
        // $(function() {
+
 
             $('.menu-anchor').on('click touchstart', function(e){
                 $('html').toggleClass('menu-active');
