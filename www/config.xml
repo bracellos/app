@@ -18,16 +18,6 @@
     <splash src="9-patch.9.png" />
     <access origin="*" />
 
-    <config-file platform="android" parent="/manifest">
-        <supports-screens 
-            android:xlargeScreens="true" 
-            android:largeScreens="true" 
-            android:smallScreens="true" />
-        <application android:theme="@android:style/Theme.NoTitleBar" >
-            <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
-            </activity>
-        </application>
-    </config-file>  
 
 
     <allow-intent href="http://*/*" />
@@ -44,4 +34,8 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="~2.1.1" />
+
+    <gap:config-file platform="android" parent="/manifest">
+        <application android:theme="@android:style/Theme.NoTitleBar"></application>
+    </gap:config-file>
 </widget>
