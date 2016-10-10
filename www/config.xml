@@ -7,7 +7,6 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="16" />
     <plugin name="org.apache.cordova.splashscreen" source="pgb" spec="1.0.0" />
-    <preference name="phonegap-version" value="3.1.0" /> 
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="5000" />
     <preference name="FadeSplashScreen" value="false"/>
