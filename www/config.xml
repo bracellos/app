@@ -1,18 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="br.com.mamuth.idv" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Igreja da Verdade</name>
+    <name>IDV</name>
     <description>Hello World sample application that responds to the deviceready event.</description>
     <author email="support@phonegap.com" href="http://phonegap.com">PhoneGap Team</author>
     <content src="index.html" />
+    <preference name="fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="16" />
-    <plugin name="org.apache.cordova.splashscreen" source="pgb" spec="1.0.0" />
     <preference name="phonegap-version" value="3.7.0" /> 
+    <plugin name="org.apache.cordova.splashscreen" source="pgb" spec="1.0.0" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="5000" />
     <preference name="FadeSplashScreen" value="false"/>
     <preference name="ShowSplashScreenSpinner" value="true"/>
-    <preference name="SplashShowOnlyFirstTime" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
     <icon src="res/icon/android/drawable-xhdpi.png" />
     <splash src="9-patch.9.png" />
     <access origin="*" />
