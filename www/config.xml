@@ -33,8 +33,4 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="~2.1.1" />
-
-    <config-file platform="android" parent="/manifest">
-        <application android:theme="@android:style/Theme.NoTitleBar"></application>
-    </config-file>
 </widget>
