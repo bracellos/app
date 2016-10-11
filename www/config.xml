@@ -7,7 +7,6 @@
     <preference name="fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="16" />
-    <preference name="phonegap-version" value="6.3.0" /> 
     <plugin name="br.com.paveisitemas.splashscreen" spec="2.1.1" source="pgb" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="5000" />
