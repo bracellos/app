@@ -14,6 +14,7 @@
     <preference name="ShowSplashScreenSpinner" value="false"/>
     <preference name="SplashShowOnlyFirstTime" value="true" />
     <icon src="res/icon/android/drawable-xhdpi.png" />
+    <preference name="SplashScreen" value="res/screen/android/9-patch.9.png" />
     <platform name="android">
         <!-- you can use any density that exists in the Android project -->
         <splash src="res/screen/android/drawable-land-hdpi.png" density="land-hdpi"/>
