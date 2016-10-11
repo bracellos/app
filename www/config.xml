@@ -7,27 +7,16 @@
     <preference name="fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="16" />
-    <plugin name="cordova-plugin-device" spec="https://github.com/apache/cordova-plugin-splashscreen.git#4.0.0" />
+    <preference name="phonegap-version" value="3.7.0" /> 
+    <plugin name="org.apache.cordova.splashscreen" source="pgb" spec="1.0.0" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="5000" />
     <preference name="FadeSplashScreen" value="false"/>
     <preference name="ShowSplashScreenSpinner" value="false"/>
-    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="SplashShowOnlyFirstTime" value="true" />
     <icon src="res/icon/android/drawable-xhdpi.png" />
-    <platform name="android">
-        <!-- you can use any density that exists in the Android project -->
-        <splash src="res/screen/android/drawable-land-hdpi.png" density="land-hdpi"/>
-        <splash src="res/screen/android/drawable-land-ldpi.png" density="land-ldpi"/>
-        <splash src="res/screen/android/drawable-land-mdpi.png" density="land-mdpi"/>
-        <splash src="res/screen/android/drawable-land-xhdpi.png" density="land-xhdpi"/>
-     
-        <splash src="res/screen/android/drawable-port-hdpi.png" density="port-hdpi"/>
-        <splash src="res/screen/android/drawable-port-ldpi.png" density="port-ldpi"/>
-        <splash src="res/screen/android/drawable-port-mdpi.png" density="port-mdpi"/>
-        <splash src="res/screen/android/drawable-port-xhdpi.png" density="port-xhdpi"/>
-    </platform>
+    <splash src="9-patch.9.png" />
     <access origin="*" />
-
 
 
     <allow-intent href="http://*/*" />
