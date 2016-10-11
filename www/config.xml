@@ -7,7 +7,7 @@
     <preference name="fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="16" />
-    <plugin name="cordova-plugin-splashscreen" spec="^4.0.0" />
+    <plugin name="cordova-plugin-splashscreen" spec="4.0.0" />
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="5000" />
     <preference name="FadeSplashScreen" value="false"/>
@@ -25,6 +25,7 @@
         <splash src="res/screen/android/drawable-port-ldpi.png" density="port-ldpi"/>
         <splash src="res/screen/android/drawable-port-mdpi.png" density="port-mdpi"/>
         <splash src="res/screen/android/drawable-port-xhdpi.png" density="port-xhdpi"/>
+        <splash src="res/screen/android/9-patch.9.png"/>
     </platform>
     <access origin="*" />
 
