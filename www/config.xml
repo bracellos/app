@@ -10,8 +10,8 @@
     <plugin name="cordova-plugin-splashscreen" spec="4.0.0" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <plugin name="cordova-plugin-network-information" version="1" />
-    <plugin name="phonegap-googlemaps-plugin" spec="1" />
-    <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
+    <plugin name="phonegap-googlemaps-plugin" version="1" />
+    <plugin name="com.phonegap.plugins.pushplugin" version="2.4.0" />
     <platform name="android">
         <!-- you can use any density that exists in the Android project -->
         <splash src="res/screen/android/drawable-land-hdpi.png" density="land-hdpi"/>
