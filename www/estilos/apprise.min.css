@@ -2,7 +2,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.9);
   display: none;
   z-index: 2147483647;
 }
@@ -31,10 +30,10 @@
   display: block;
 }
 .appriseOuter span.resposta-ok{
-	color:#13B27D;
+	color:#000;
 }
 .appriseOuter span.resposta-no{
-	color:#BC0936;
+	color:#000;
 }
 .appriseInner {
   color: #333333;
@@ -48,9 +47,9 @@
   -webkit-border-radius: 3px;
   border-radius: 3px;
   -khtml-border-radius: 3px;
-  background: 0;
-  color: #232d3d;
-  font-size: 12px;
+  background: #000;
+  color: #fff;
+  font-size: 70%;
   font-weight: 700;
   text-shadow: 0 1px 0 #ffffff;
   cursor: pointer;
