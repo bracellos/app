@@ -332,6 +332,7 @@ var app = {
                             metodo:'registraDevice', 
                             reg:reg,
                             phoneNumber: result.phoneNumber,
+                            fromIgreja:codInstituicao,
                             token:token
                         },
                         type : 'GET',
