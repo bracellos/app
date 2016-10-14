@@ -68,72 +68,20 @@ var app = {
 
             //registrar app
             function registraApp(){
-                var pushNotification;
-                pushNotification = window.plugins.pushNotification;
-                try 
-                { 
-                    pushNotification = window.plugins.pushNotification;
-                    pushNotification.register(successHandler, errorHandler, {"senderID":"274707851267","ecb":"onNotification"});        // required!
+                var push = PushNotification.init({ "android": {"senderID": "274707851267"}});
 
-                }
-                catch(err) 
-                { 
-                    txt="Um erro ocorreu.\n\n"; 
-                    txt+="Descrição do erro: " + err.message + "\n\n"; 
-                    alert(txt); 
-                } 
-                
-                // handle GCM notifications for Android
-                function onNotification(e) {                
-                    switch( e.event )
-                    {
-                        case 'registered':
-                        if ( e.regid.length > 0 ){         
-                            $.ajax({
-                                url : 'http://www.agenciamamuth.com.br/appandroid/ws/webservice.php',
-                                crossDomain: false,
-                                dataType : 'json',
-                                data : {metodo:registraDevice, reg:e.regid,token:token},
-                                type : 'GET',
-                                success : function(data){
-                                    alert(data);
-                                },
-                                complete: function(){
-                                    
-                                }
-                            });                      
-                        }
-                        break;
-                        
-                        case 'message':
-                            // if this flag is set, this notification happened while we were in the foreground.
-                            // you might want to play a sound to get the user's attention, throw up a dialog, etc.
-                            if (e.foreground){
-                                var soundfile = e.soundname || e.payload.sound;
-                                var my_media = new Media("/android_asset/www/"+ soundfile);
-                                my_media.play();
-                            }
-                        break;
-                        
-                        case 'error':
-                            alert('algo deu errado');
-                        break;
-                        
-                        default:
+                push.on('registration', function(data) {
+                    executaRegistro(data.registrationId);    
+             
+                });
 
-                        break;
-                    }
-                }
-                function tokenHandler (result) {
+                push.on('notification', function(data) {
 
-                }
-                
-                function successHandler (result) {
-                }
-                
-                function errorHandler (error) {
+                });
 
-                }                
+                push.on('error', function(e) {
+
+                });             
                            
             }
 
@@ -371,6 +319,36 @@ var app = {
                   }
                 });
             }
+            function executaRegistro(reg){
+                var telefone;
+                //pegar numero telefone
+                window.plugins.sim.getSimInfo(successCallback, errorCallback);
+                function successCallback(result) {
+                    $.ajax({
+                        url : 'http://www.agenciamamuth.com.br/appandroid/ws/webservice.php',
+                        crossDomain: false,
+                        dataType : 'html',
+                        data : {
+                            metodo:'registraDevice', 
+                            reg:reg,
+                            phoneNumber: result.phoneNumber,
+                            token:token
+                        },
+                        type : 'GET',
+                        success : function(ret){
+                           // alert("err: "+ret);
+                        },
+                        error: function(){
+                           // alert('caiu no erro: '+ ret);
+                        }
+                    });                  
+ 
+                }
+                 
+                function errorCallback(error) {
+                  console.log(error);
+                }                
+            }  
             postsRecents('n','ULTIMAS POSTAGENS'); 
             loader('none');
             registraApp();

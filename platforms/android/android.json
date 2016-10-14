@@ -97,7 +97,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"PushPlugin\"><param name=\"android-package\" value=\"com.plugin.gcm.PushPlugin\" /></feature>",
+                            "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" value=\"com.adobe.phonegap.push.PushPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Sim\"><param name=\"android-package\" value=\"com.pbakondy.Sim\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -140,7 +144,7 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.RECORD_VIDEO\" />",
@@ -158,7 +162,7 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
@@ -181,10 +185,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
                             "count": 1
                         },
@@ -193,11 +193,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<permission android:name=\"br.com.mamuth.idv.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "xml": "<uses-permission android:name=\"${applicationId}.permission.C2D_MESSAGE\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"br.com.mamuth.idv.permission.C2D_MESSAGE\" />",
+                            "xml": "<permission android:name=\"${applicationId}.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" />",
                             "count": 1
                         }
                     ],
@@ -211,15 +211,37 @@
                             "count": 1
                         },
                         {
-                            "xml": "<activity android:exported=\"true\" android:name=\"com.plugin.gcm.PushHandlerActivity\" />",
+                            "xml": "<activity android:exported=\"true\" android:name=\"com.adobe.phonegap.push.PushHandlerActivity\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<receiver android:name=\"com.plugin.gcm.CordovaGCMBroadcastReceiver\" android:permission=\"com.google.android.c2dm.permission.SEND\"><intent-filter><action android:name=\"com.google.android.c2dm.intent.RECEIVE\" /><action android:name=\"com.google.android.c2dm.intent.REGISTRATION\" /><category android:name=\"br.com.mamuth.idv\" /></intent-filter></receiver>",
+                            "xml": "<receiver android:name=\"com.adobe.phonegap.push.BackgroundActionButtonHandler\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<service android:name=\"com.plugin.gcm.GCMIntentService\" />",
+                            "xml": "<receiver android:exported=\"true\" android:name=\"com.google.android.gms.gcm.GcmReceiver\" android:permission=\"com.google.android.c2dm.permission.SEND\"><intent-filter><action android:name=\"com.google.android.c2dm.intent.RECEIVE\" /><category android:name=\"${applicationId}\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:exported=\"false\" android:name=\"com.adobe.phonegap.push.GCMIntentService\"><intent-filter><action android:name=\"com.google.android.c2dm.intent.RECEIVE\" /></intent-filter></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:exported=\"false\" android:name=\"com.adobe.phonegap.push.PushInstanceIDListenerService\"><intent-filter><action android:name=\"com.google.android.gms.iid.InstanceID\" /></intent-filter></service>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:exported=\"false\" android:name=\"com.adobe.phonegap.push.RegistrationIntentService\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "res/values/strings.xml": {
+                "parents": {
+                    "/resources": [
+                        {
+                            "xml": "<string name=\"google_app_id\">274707851267</string>",
                             "count": 1
                         }
                     ]
@@ -292,7 +314,11 @@
             "API_KEY_FOR_ANDROID": "AIzaSyB-0MUiU3PH4hcnGMbd8A8OQ21sPpaPH5Y",
             "PACKAGE_NAME": "br.com.mamuth.idv"
         },
-        "com.phonegap.plugins.PushPlugin": {
+        "phonegap-plugin-push": {
+            "SENDER_ID": "274707851267",
+            "PACKAGE_NAME": "br.com.mamuth.idv"
+        },
+        "cordova-plugin-sim": {
             "PACKAGE_NAME": "br.com.mamuth.idv"
         }
     },
@@ -759,10 +785,24 @@
             ]
         },
         {
-            "file": "plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js",
-            "id": "com.phonegap.plugins.PushPlugin.PushNotification",
+            "file": "plugins/phonegap-plugin-push/www/push.js",
+            "id": "phonegap-plugin-push.PushNotification",
             "clobbers": [
                 "PushNotification"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-sim/www/sim.js",
+            "id": "cordova-plugin-sim.Sim",
+            "merges": [
+                "window.plugins.sim"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-sim/www/android/sim.js",
+            "id": "cordova-plugin-sim.SimAndroid",
+            "merges": [
+                "window.plugins.sim"
             ]
         }
     ],
@@ -788,6 +828,7 @@
         "cordova-plugin-vibration": "2.1.1",
         "cordova-plugin-whitelist": "1.2.2",
         "plugin.google.maps": "1.3.9",
-        "com.phonegap.plugins.PushPlugin": "2.5.0"
+        "phonegap-plugin-push": "1.8.3",
+        "cordova-plugin-sim": "1.3.0"
     }
 }

@@ -62,7 +62,11 @@
             "API_KEY_FOR_ANDROID": "AIzaSyB-0MUiU3PH4hcnGMbd8A8OQ21sPpaPH5Y",
             "PACKAGE_NAME": "br.com.mamuth.idv"
         },
-        "com.phonegap.plugins.PushPlugin": {
+        "phonegap-plugin-push": {
+            "SENDER_ID": "274707851267",
+            "PACKAGE_NAME": "br.com.mamuth.idv"
+        },
+        "cordova-plugin-sim": {
             "PACKAGE_NAME": "br.com.mamuth.idv"
         }
     },

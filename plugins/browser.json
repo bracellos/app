@@ -13,7 +13,11 @@
         "plugin.google.maps": {
             "PACKAGE_NAME": "br.com.mamuth.idv"
         },
-        "com.phonegap.plugins.PushPlugin": {
+        "phonegap-plugin-push": {
+            "SENDER_ID": "274707851267",
+            "PACKAGE_NAME": "br.com.mamuth.idv"
+        },
+        "cordova-plugin-sim": {
             "PACKAGE_NAME": "br.com.mamuth.idv"
         }
     },

@@ -23,11 +23,27 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.phonegap.plugins.PushPlugin/www/PushNotification.js",
-        "id": "com.phonegap.plugins.PushPlugin.PushNotification",
-        "pluginId": "com.phonegap.plugins.PushPlugin",
+        "file": "plugins/phonegap-plugin-push/www/push.js",
+        "id": "phonegap-plugin-push.PushNotification",
+        "pluginId": "phonegap-plugin-push",
         "clobbers": [
             "PushNotification"
+        ]
+    },
+    {
+        "file": "plugins/phonegap-plugin-push/www/browser/push.js",
+        "id": "phonegap-plugin-push.BrowserPush",
+        "pluginId": "phonegap-plugin-push",
+        "clobbers": [
+            "PushNotification"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-sim/www/sim.js",
+        "id": "cordova-plugin-sim.Sim",
+        "pluginId": "cordova-plugin-sim",
+        "merges": [
+            "window.plugins.sim"
         ]
     }
 ];
@@ -36,7 +52,8 @@ module.exports.metadata =
 {
     "cordova-plugin-splashscreen": "3.2.2",
     "plugin.google.maps": "1.3.9",
-    "com.phonegap.plugins.PushPlugin": "2.5.0"
+    "phonegap-plugin-push": "1.8.3",
+    "cordova-plugin-sim": "1.3.0"
 }
 // BOTTOM OF METADATA
 });
