@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "br.com.mamuth.idv"
+        },
+        "plugin.google.maps": {
+            "PACKAGE_NAME": "br.com.mamuth.idv"
+        },
+        "com.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "br.com.mamuth.idv"
+        }
+    },
+    "dependent_plugins": {}
+}

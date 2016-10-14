@@ -1,0 +1,68 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; border: 0; vertical-align: baseline; font-family: 'pt_sansregular'; color:#000; font-size:100%;}
+p{line-height:14px;}
+html{
+	 overflow-x: hidden; 
+	 overflow-y:scroll;
+}
+
+body{
+    width:100%;
+}
+html,body{height:100%;}
+
+/*    HTML 5    */
+section, article, aside, header, footer, nav, dialog, figure, fieldset{display:block;}
+
+/*     Link    */
+a{text-decoration: none; outline: none;}
+
+/*    Relativando as Tags    */
+ul, li, ol, menu, dl, dl dd, dl dt, div, h1, h2, h3, h4, h5, h6, p, a, iframe, form, button, fieldset,
+
+/* HTML 5 */
+section, article, aside, header, footer, nav, dialog, figure{list-style: none; position: relative;}
+
+/*     Hs     */
+h1, h2, h3, h4, h5, h6, p{margin-bottom: 5px; font-weight:normal;}
+
+h1{font-size: 24px}
+h2{font-size: 20px}
+h3{font-size: 18px}
+h4{font-size: 16px}
+h5{font-size: 14px}
+h6{font-size: 10px}
+
+small{font-size:10px;}
+
+/*    Form     */
+button{margin-top:1%; background-color:transparent; cursor:pointer;}
+
+@font-face {
+    font-family: 'pt_sansbold';
+    src: url('../fontes/pt_sans-web-bold-webfont.woff2') format('woff2'),
+         url('../fontes/pt_sans-web-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pt_sansbold_italic';
+    src: url('../fontes/pt_sans-web-bolditalic-webfont.woff2') format('woff2'),
+         url('../fontes/pt_sans-web-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pt_sansitalic';
+    src: url('../fontes/pt_sans-web-italic-webfont.woff2') format('woff2'),
+         url('../fontes/pt_sans-web-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pt_sansregular';
+    src: url('../fontes/pt_sans-web-regular-webfont.woff2') format('woff2'),
+         url('../fontes/pt_sans-web-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

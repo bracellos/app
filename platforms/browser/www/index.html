@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+	<link rel="stylesheet" type="text/css" href="estilos/reset.css" media="screen,print" />
+	<link rel="stylesheet" type="text/css" href="estilos/layout.css" media="screen,print" />
+	<link rel="stylesheet" type="text/css" href="estilos/apprise.min.css" media="screen,print" />
+	<link rel="stylesheet" href="icons/css/font-awesome.min.css">
+	
+
+	<title>IEDV</title>
+</head>
+<body>
+	<section class="app">
+		<header class="headerapp">
+			<span class="menu-anchor"></span>
+			<img src="images/logo.png" class="logoapp">
+		</header>
+		<nav>
+			<h1>IGREJA DA VERDADE</h1>
+			<ul>
+				<li><a href="#inicio" class="navint"><i class="fa fa-home" aria-hidden="true"></i> &nbsp;INICIO</a></li>
+				<li><a href="#avisos" class="navint"><i class="fa fa-picture-o" aria-hidden="true"></i> &nbsp;IMAGENS</a></li>
+				<li><a href="#audio" class="navint"><i class="fa fa-volume-up" aria-hidden="true"></i> &nbsp;ÁUDIOS</a></li>
+				<li><a href="#video" class="navint"><i class="fa fa-video-camera" aria-hidden="true"></i> &nbsp;VÍDEOS</a></li>
+				<li><a href="#localizacao" class="navint"><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;ONDE ESTAMOS</a></li>
+				<li><a href="#contato" class="navint"><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;FALE CONOSCO</a></li>
+				<li><a href="#about" class="navint"><i class="fa fa-copyright" aria-hidden="true"></i> &nbsp;About</a></li>
+			</ul>			
+		</nav>
+
+		<section id="loader"><img src="images/ajax-loader.gif"/></section>
+		<section class="main">
+			<section id="alvo"></section>
+		</section>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="apprise-1.5.min.js"></script>
+		<script src="jquery-ui.min.js"></script>
+		<script type="text/javascript" src="PushNotification.js"></script>
+		<script type="text/javascript" src="metodos.js"></script>
+		<script type="text/javascript">
+	        app.initialize();
+	    </script>
+	</section>    
+</body>
+</html>
