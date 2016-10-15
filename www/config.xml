@@ -4,6 +4,7 @@
     <description>Feed da Igreja da Verdade. Receba mensagens para sua edificaçã</description>
     <author email="contato@queroaplicativo.com" href="http://www.queroaplicativo.com">Quero Aplicativo</author>
     <content src="index.html" />
+    <preference name="phonegap-version" value="3.9.0"/>
     <preference name="fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="false" />
     <preference name="android-minSdkVersion" value="14" />
