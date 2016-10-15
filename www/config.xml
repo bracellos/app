@@ -4,11 +4,10 @@
     <description>Feed da Igreja da Verdade. Receba mensagens para sua edificaçã</description>
     <author email="contato@queroaplicativo.com" href="http://www.queroaplicativo.com">Quero Aplicativo</author>
     <content src="index.html" />
-    <preference name="phonegap-version" value="6.2.0"/>
     <preference name="fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="false" />
-    <preference name="android-minSdkVersion" value="16" />
-    <plugin name="cordova-plugin-splashscreen" source="pgb" spec="4.0.0" />
+    <preference name="android-minSdkVersion" value="14" />
+    <plugin name="cordova-plugin-splashscreen" spec="4.0.0" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <plugin name="cordova-plugin-network-information" version="1" />
     <plugin name="cordova-plugin-googlemaps" version="1.3.9">
