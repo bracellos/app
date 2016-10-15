@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="br.com.mamuth.idv" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>IDV</name>
+    <description>Feed da Igreja da Verdade. Receba mensagens para sua edificação</description>
+    <author email="contato@queroaplicativo.com" href="http://www.queroaplicativo.com">Quero Aplicativo</author>
+    <content src="index.html" />
+    <preference name="fullscreen" value="true" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="android-minSdkVersion" value="16" />
+    <plugin name="cordova-plugin-splashscreen" source="pgb" spec="3.2.2" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <plugin name="cordova-plugin-network-information" version="1" />
+    <plugin name="cordova-plugin-googlemaps" version="1.3.9">
+        <param name="API_KEY_FOR_ANDROID" value="AIzaSyB-0MUiU3PH4hcnGMbd8A8OQ21sPpaPH5Y" />
+    </plugin>
+    <plugin name="phonegap-plugin-push" spec="1.6.0">
+        <param name="SENDER_ID" value="274707851267" />
+    </plugin>    
+    <plugin name="cordova-plugin-sim" version="1.3.0"/> 
+    <platform name="android">
+        <icon src="res/icon/android/drawable-ldpi.png" density="ldpi"/>
+        <icon src="res/icon/android/drawable-mdpi.png" density="mdpi"/>
+        <icon src="res/icon/android/drawable-hdpi.png" density="hdpi"/>
+        <icon src="res/icon/android/drawable-xhdpi.png" density="xhdpi"/>
+        <splash src="res/screen/android/drawable-land-hdpi.png" density="land-hdpi"/>
+        <splash src="res/screen/android/drawable-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/screen/android/drawable-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/screen/android/drawable-land-xhdpi.png" density="land-xhdpi"/>
+        <splash src="res/screen/android/drawable-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/drawable-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/drawable-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/drawable-port-xhdpi.png" density="port-xhdpi"/>
+    </platform>
+    <preference name="SplashScreen" value="screen"/>
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="FadeSplashScreen" value="true"/>
+    <preference name="FadeSplashScreenDuration" value="1000"/>
+    <preference name="ShowSplashScreenSpinner" value="true"/>
+    <preference name="SplashShowOnlyFirstTime" value="true" />
+    <access origin="*"/>
+    <allow-navigation href="*"/>
+
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="android" spec="~4.1.1" />
+</widget>
