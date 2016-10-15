@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="br.com.mamuth.idv" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="br.com.queroaplicativo.idv" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>IDV</name>
     <description>Feed da Igreja da Verdade. Receba mensagens para sua edificaçã</description>
     <author email="contato@queroaplicativo.com" href="http://www.queroaplicativo.com">Quero Aplicativo</author>
