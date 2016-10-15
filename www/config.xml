@@ -7,7 +7,7 @@
     <preference name="fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="false" />
     <preference name="android-minSdkVersion" value="14" />
-    <plugin name="cordova-plugin-splashscreen" />
+    <plugin name="cordova-plugin-splashscreen" version="4.0.0" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <plugin name="cordova-plugin-network-information" version="1" />
     <plugin name="cordova-plugin-googlemaps" version="1.3.9">
