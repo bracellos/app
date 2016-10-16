@@ -292,11 +292,12 @@ var app = {
                             break;
 
                             case 'mpg':
+                                window.youtube.init("AIzaSyD0_krCohSsj6uwD0DZMdLipnqm5Ll1qIk");
                                 article += '<article rel="'+ret[i].id+'">';
                                     article += '<h3>'+ret[i].titulo+'</h3>';
                                     article += '<time>'+ret[i].data+'</time>';
-                                    var video = ret[i].video.replace('https://www.youtube.com/watch?v=','https://www.youtube.com/embed/');
-                                    article += '<iframe width="100%" src="'+video+'" class="midia" frameborder="0" allowfullscreen></iframe>';
+                                    var video = ret[i].video.replace('https://www.youtube.com/watch?v=','');
+                                    article += window.youtube.playVideo(video);;
                                     article += ret[i].texto;
                                 article += '</article>';  
                             break;
